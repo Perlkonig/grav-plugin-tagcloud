@@ -22,7 +22,7 @@ You should now have all the plugin files under
 
     /your/site/grav/user/plugins/tagcloud
 	
-> NOTE: This plugin is a modular component for Grav which requires [Grav](http://github.com/getgrav/grav), the [Error](https://github.com/getgrav/grav-plugin-error), [Problems](https://github.com/getgrav/grav-plugin-problems) and [Taxonomy List](https://github.com/getgrav/grav-plugin-taxonomylist) plugins, and a theme to be installed in order to operate.
+> NOTE: This plugin is a modular component for Grav which requires [Grav](http://github.com/getgrav/grav); the [Error](https://github.com/getgrav/grav-plugin-error), [Problems](https://github.com/getgrav/grav-plugin-problems) and [Taxonomy List](https://github.com/getgrav/grav-plugin-taxonomylist) plugins; and a theme to be installed in order to operate.
 
 # Usage
 
