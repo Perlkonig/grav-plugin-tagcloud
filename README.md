@@ -22,7 +22,7 @@ You should now have all the plugin files under
 
     /your/site/grav/user/plugins/tagcloud
 	
->> NOTE: This plugin is a modular component for Grav which requires [Grav](http://github.com/getgrav/grav), the [Error](https://github.com/getgrav/grav-plugin-error), [Problems](https://github.com/getgrav/grav-plugin-problems) and [Taxonomy List](https://github.com/getgrav/grav-plugin-taxonomylist) plugins, and a theme to be installed in order to operate.
+> NOTE: This plugin is a modular component for Grav which requires [Grav](http://github.com/getgrav/grav), the [Error](https://github.com/getgrav/grav-plugin-error), [Problems](https://github.com/getgrav/grav-plugin-problems) and [Taxonomy List](https://github.com/getgrav/grav-plugin-taxonomylist) plugins, and a theme to be installed in order to operate.
 
 # Usage
 
@@ -33,40 +33,61 @@ taxonomy:
     tag: [tag1, tag2]
 ```
 
-You will also need to do the following:
+Then `include` the twig file somewhere in your theme skeleton (usually in `sidebar.html.twig`) along the following lines:
 
-  - Copy the `tagcloud.html.twig` file from the plugin folder to your theme and adjust as you see fit.
-  - `include` the twig file somewhere in your theme skeleton (usually in `sidebar.html.twig`) along the following lines:
     ```
     {% if config.plugins.tagcloud.enabled %}
       <aside class="widget widget_meta">
-        <h2 class="widget-title">{{config.plugins.tagcloud.title|t}}</h2>
+        <h2 class="widget-title">{{'POPULAR TAGS'|t}}</h2>
         {% include 'partials/tagcloud.html.twig' %}
         </aside>
     {% endif %}
 
     ```
-  - Copy the contents of the CSS in the `assets` folder of the plugin into your theme and adjust as you see fit.
 
 > Remember that the plugin `taxonomylist` must be installed and enabled!
-
-I recognize that you can configure the PHP file to use the files in the plugin folder, but I can't imagine someone using these files as is. If I'm wrong, let me know and I'll go the PHP file route.
 
 # Config Defaults
 ```
 enabled: true
 threshold: 0
-title: "POPULAR TAGS"
+built_in_css: true
 ```
-The fields `enabled` and `title` are self-explanatory, but `threshold` takes a little explaining. The tags are sized based on how frequently they appear. This is done by first determining the number of times the *most* frequent tag appears (`max`) and then comparing each tag's count (`count`) against it, forming a percentage: `percent = (count/max) * 100`.
 
-That `percent` number is then compared against the different tiers in the twig file to determine how it should be sized. The `threshold` in the config determines the minimum `percent` a tag must be to even be displayed. A value of 0 shows all tags. A value of 100 only shows the tags whose `counts` equal the `max`. Any value between that will show some subset of your tags. You'll need to do some trial and error to find the right number. It really depends on how many different tags your blog uses.
+To change the defaults, copy `tagcloud.yaml` to your `user/config/plugins` folder and edit it there.
+
+- Use the `enabled` field to activate or deactivate the plugin.
+
+- The `built_in_css` field tells the plugin to use the included CSS. To customize, set this to `false` and see the **Customization** section for further instructions.
+
+- The `threshold` field takes a little explaining. 
+
+  The tags are sized based on how frequently they appear. This is done by first determining the number of times the *most* frequent tag appears (`max`) and then comparing each tag's count (`count`) against it, forming a percentage: `percent = (count/max) * 100`.
+
+  That `percent` number is then compared against the different tiers in the twig file to determine how it should be sized. The `threshold` in the config determines the minimum `percent` a tag must be to even be displayed. A value of 0 shows all tags. A value of 100 only shows the tags whose `counts` equal the `max`. Any value between that will show some subset of your tags. You'll need to do some trial and error to find the right number. It really depends on how many different tags your blog uses and how frequently you use them.
+
+> NOTE: I don't personally use the Admin plugin, so please let me know if it does not work as expected. The `blueprints.yaml` file should support it.
+
+# Customization
+
+You can customize both the CSS and the twig file.
+
+## CSS
+
+To customize the CSS, do the following:
+
+  - Disable `built_in_css`.
+  - Copy `tagcloud.css` from the plugin's `asset` folder into the `asset` folder of your theme.
+  - Edit as you see fit.
+
+## Twig
+
+To customize the twig file (including changing the way the various levels are differentiated), do the following:
+
+  - Copy `tagcloud.html.twig` from the plugin's `templates/partials` folder into your theme.
+  - Edit as you see fit.
 
 # Credits
 
 The approach was inspired by [a blog post by Steve Thomas](https://stevethomas.com.au/php/how-to-make-a-tag-cloud-in-php-mysql-and-css.html).
-
-# Support
-
-This is my very first Grav plugin. I welcome any feedback and pull requests.
 

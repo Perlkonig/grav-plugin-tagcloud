@@ -1,10 +1,8 @@
 #tagcloud {
-	width: 100%; /*300px;*/
-	/*background:#CFE3FF;*/
-	/*color:#0066FF;*/
+	width: 100%;
 	padding: 10px;
 	padding-top: 0px;
-	border: 1px solid rgba(51, 51, 51, 0.0980392); /*#559DFF;*/
+	border: 1px solid rgba(51, 51, 51, 0.0980392);
 	text-align:center;
     -moz-border-radius: 4px;
     -webkit-border-radius: 4px;

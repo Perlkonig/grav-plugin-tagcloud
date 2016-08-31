@@ -1,5 +1,5 @@
 name: Tagcloud
-version: 0.1.0
+version: 1.0.0
 description: Create a simple tag cloud
 icon: plug
 author:
@@ -7,9 +7,9 @@ author:
   email: aaron@daltons.ca
 homepage: https://github.com/Perlkonig/grav-plugin-tagcloud
 demo: http://perlkonig.com
-keywords: grav, plugin, etc
+keywords: grav, plugin, tag, cloud
 bugs: https://github.com/Perlkonig/grav-plugin-tagcloud/issues
-readme: https://github.com/Perlkonig/grav-plugin-tagcloud/blob/develop/README.md
+readme: https://github.com/Perlkonig/grav-plugin-tagcloud/blob/master/README.md
 license: MIT
 
 dependencies:
@@ -28,10 +28,6 @@ form:
         0: Disabled
       validate:
         type: bool
-    title:
-      type: text
-      label: Cloud title
-      help: Appears above the cloud
     threshold:
       type: text
       label: Threshold
@@ -40,3 +36,12 @@ form:
         type: int
         min: 0
         max: 100
+    built_in_css:
+      type: toggle
+      label: Use built-in CSS?
+      help: To customize, disable this and refer to the README for instructions.
+      highlight: 1
+      default: 1
+      options:
+        1: Yes
+        0: No
