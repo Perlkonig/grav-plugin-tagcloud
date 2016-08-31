@@ -1,0 +1,42 @@
+name: Tagcloud
+version: 0.1.0
+description: Create a simple tag cloud
+icon: plug
+author:
+  name: Aaron Dalton
+  email: aaron@daltons.ca
+homepage: https://github.com/Perlkonig/grav-plugin-tagcloud
+demo: http://perlkonig.com
+keywords: grav, plugin, etc
+bugs: https://github.com/Perlkonig/grav-plugin-tagcloud/issues
+readme: https://github.com/Perlkonig/grav-plugin-tagcloud/blob/develop/README.md
+license: MIT
+
+dependencies:
+  - taxonomylist
+
+form:
+  validation: strict
+  fields:
+    enabled:
+      type: toggle
+      label: Plugin status
+      highlight: 1
+      default: 0
+      options:
+        1: Enabled
+        0: Disabled
+      validate:
+        type: bool
+    title:
+      type: text
+      label: Cloud title
+      help: Appears above the cloud
+    threshold:
+      type: text
+      label: Threshold
+      help: A number between 0 and 100. The default (0) includes all tags. Any other number will drop tags from the cloud. A value of 100 will only show the most popular tag (or tags, if there are ties). See the documentation for an explanation of how this works. You'll have to do some trial and error to figure it out for your specific taxonomy.
+      validate:
+        type: int
+        min: 0
+        max: 100
