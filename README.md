@@ -62,6 +62,10 @@ The fields `enabled` and `title` are self-explanatory, but `threshold` takes a l
 
 That `percent` number is then compared against the different tiers in the twig file to determine how it should be sized. The `threshold` in the config determines the minimum `percent` a tag must be to even be displayed. A value of 0 shows all tags. A value of 100 only shows the tags whose `counts` equal the `max`. Any value between that will show some subset of your tags. You'll need to do some trial and error to find the right number. It really depends on how many different tags your blog uses.
 
+# Credits
+
+The approach was inspired by [a blog post by Steve Thomas](https://stevethomas.com.au/php/how-to-make-a-tag-cloud-in-php-mysql-and-css.html).
+
 # Support
 
 This is my very first Grav plugin. I welcome any feedback and pull requests.
