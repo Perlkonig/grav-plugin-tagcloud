@@ -42,8 +42,13 @@ Then `include` the twig file somewhere in your theme skeleton (usually in `sideb
         {% include 'partials/tagcloud.html.twig' %}
         </aside>
     {% endif %}
-
     ```
+
+If you're using the blog plug-in, change the include part to:
+
+```
+{% include 'partials/tagcloud.html.twig' with {'base_url':new_base_url, 'taxonomy':'tag'} %}
+```
 
 > Remember that the plugin `taxonomylist` must be installed and enabled!
 
