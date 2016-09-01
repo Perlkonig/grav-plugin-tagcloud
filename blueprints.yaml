@@ -1,5 +1,5 @@
 name: Tagcloud
-version: 1.0.1
+version: 1.0.2
 description: Create a simple tag cloud
 icon: cloud
 author:
@@ -7,7 +7,7 @@ author:
   email: aaron@daltons.ca
 homepage: https://github.com/Perlkonig/grav-plugin-tagcloud
 demo: http://perlkonig.com
-keywords: grav, plugin, tag, cloud
+keywords: grav, plugin, tag, tags, cloud, sidebar
 bugs: https://github.com/Perlkonig/grav-plugin-tagcloud/issues
 readme: https://github.com/Perlkonig/grav-plugin-tagcloud/blob/master/README.md
 license: MIT
