@@ -62,9 +62,9 @@ To change the defaults, copy `tagcloud.yaml` to your `user/config/plugins` folde
 
 - The `threshold` field takes a little explaining. 
 
-  The tags are sized based on how frequently they appear. This is done by first determining the number of times the *most* frequent tag appears (`max`) and then comparing each tag's count (`count`) against it, forming a percentage: `percent = (count/max) * 100`.
+  The tags are sized based on how frequently they appear. This is done by first determining the number of times the *most* frequent tag appears (`max`) and then comparing each tag's count (`count`) against it, forming a percentage: `percent = (count/max) * 100`. That `percent` number is then compared against the different tiers in the twig file to determine how it should be sized. 
 
-  That `percent` number is then compared against the different tiers in the twig file to determine how it should be sized. The `threshold` in the config determines the minimum `percent` a tag must be to even be displayed. A value of 0 shows all tags. A value of 100 only shows the tags whose `counts` equal the `max`. Any value between that will show some subset of your tags. You'll need to do some trial and error to find the right number. It really depends on how many different tags your blog uses and how frequently you use them.
+  The `threshold` in the config determines the minimum `percent` a tag must be to even be displayed. A value of 0 shows all tags. A value of 100 only shows the tags whose `counts` equal the `max`. Any value between that will show some subset of your tags. You'll need to do some trial and error to find the right number. It really depends on how many different tags your blog uses and how frequently you use them.
 
 > NOTE: I don't personally use the Admin plugin, so please let me know if it does not work as expected. The `blueprints.yaml` file should support it.
 
@@ -77,17 +77,17 @@ You can customize both the CSS and the twig file.
 To customize the CSS, do the following:
 
   - Disable `built_in_css`.
-  - Copy `tagcloud.css` from the plugin's `asset` folder into the `asset` folder of your theme.
+  - Copy `tagcloud.css` from the plugin's `assets` folder into the `assets` folder of your theme.
   - Edit as you see fit.
 
 ## Twig
 
 To customize the twig file (including changing the way the various levels are differentiated), do the following:
 
-  - Copy `tagcloud.html.twig` from the plugin's `templates/partials` folder into your theme.
+  - Copy `tagcloud.html.twig` from the plugin's `templates/partials` folder into your theme's `templates/partials` folder.
   - Edit as you see fit.
 
 # Credits
 
-The approach was inspired by [a blog post by Steve Thomas](https://stevethomas.com.au/php/how-to-make-a-tag-cloud-in-php-mysql-and-css.html).
+The general approach was inspired by [a blog post by Steve Thomas](https://stevethomas.com.au/php/how-to-make-a-tag-cloud-in-php-mysql-and-css.html).
 
