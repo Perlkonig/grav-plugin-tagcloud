@@ -1,7 +1,7 @@
 name: Tagcloud
-version: 1.0.0
+version: 1.0.1
 description: Create a simple tag cloud
-icon: plug
+icon: cloud
 author:
   name: Aaron Dalton
   email: aaron@daltons.ca

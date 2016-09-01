@@ -1,3 +1,11 @@
+# v1.0.1
+## 09/01/2016
+
+1. [](#new)
+    * Tweaks to README, including instructions for 
+Blog Injector
+    * Changed the icon
+
 # v1.0.0
 ##  08/31/2016
 

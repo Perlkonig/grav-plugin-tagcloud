@@ -44,7 +44,8 @@ Then `include` the twig file somewhere in your theme skeleton (usually in `sideb
     {% endif %}
     ```
 
-If you're using the blog plug-in, change the include part to:
+If you're using the Blog Injector plug-in, use the 
+following:
 
 ```
 {% include 'partials/tagcloud.html.twig' with {'base_url':new_base_url, 'taxonomy':'tag'} %}
