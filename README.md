@@ -16,7 +16,7 @@ This will install the Tag Cloud plugin into your `/user/plugins` directory withi
 
 ## Manual Installation
 
-To install this plugin, just download the zip version of this repository and unzip it under `/your/site/grav/user/plugins`. Then, rename the folder to `tagcloud`. You can find these files either on [GitHub](https://github.com/getgrav/grav-plugin-taxonomylist) or via [GetGrav.org](http://getgrav.org/downloads/plugins#extras).
+To install this plugin, just download the zip version of this repository and unzip it under `/your/site/grav/user/plugins`. Then, rename the folder to `tagcloud`. You can find these files on [GitHub](https://github.com/Perlkonig/grav-plugin-tagcloud) or via [GetGrav.org](http://getgrav.org/downloads/plugins#extras).
 
 You should now have all the plugin files under
 
