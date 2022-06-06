@@ -1,5 +1,7 @@
 # Grav Tag Cloud Plugin
 
+***Abandonment Notice:** I'm afraid I simply don't have the time to maintain my Grav themes and plugins. Those interested in taking over should refer to the ["Abandoned Resource Protocol"](https://learn.getgrav.org/17/advanced/grav-development#abandoned-resource-protoc). Feel free to fork and replace. So long, and thanks for all the fish.*
+
 The **Tagcloud** Plugin is for [Grav CMS](http://github.com/getgrav/grav). It creates a rudimentary tag cloud that can be easily styled to fit your needs.
 
 ![Tagcloud Screen Capture](assets/tagcloud.png)
